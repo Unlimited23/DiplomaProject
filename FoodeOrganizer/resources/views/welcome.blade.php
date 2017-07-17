@@ -4,67 +4,51 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
+        
+        <title>Foode Organizer</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Satisfy|Bree+Serif|Candal|PT+Sans" rel="stylesheet" type="text/css">
+        
+        <!-- Styles -->    
+        {!! HTML::style('css/font-awesome.min.css') !!}
+        {!! HTML::style('css/bootstrap.min.css') !!}
+        {!! HTML::style('css/style.css') !!}
+         {!! HTML::style('css/custom.css') !!} 
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
     </head>
     <body>
+
+        <!--banner-->
+        <section id="banner">
+        <div class="bg-color">
+            <header id="header">
+                <div class="container">
+                    <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#about">About</a>
+                    <a href="#event">Event</a>
+                    <a href="#menu-list">Menu</a>
+                    <a href="#contact">Book a table</a>
+                    </div>
+                    <!-- Use any element to open the sidenav -->
+                    <span onclick="openNav()" class="pull-right menu-icon">☰</span>
+                </div>
+            </header>
+            <div class="container">
+                <div class="row">
+                    <div class="inner text-center">
+                        <h1 class="logo-name">Delicious</h1>
+                        <h2>Food To fit your lifestyle & health.</h2>
+                        <p>Specialized in Indian Cuisine!!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <!-- / banner -->
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -91,5 +75,12 @@
                 </div>
             </div>
         </div>
+    <!-- scripts -->
+    {{ Html::script('js/jquery.min.js') }}
+    {{ Html::script('js/jquery.easing.min.js') }}
+    {{ Html::script('js/bootstrap.min.js') }}
+    {{ Html::script('js/jquery.mixitup.min.js') }}
+    {{ Html::script('js/custom.js') }}
+    
     </body>
 </html>
