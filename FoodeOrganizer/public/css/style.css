@@ -39,20 +39,20 @@ table {
     min-height: 630px;
 }
 #banner h2{
-    font-family: 'Satisfy', sans-serif;
+    font-family: 'Lovers Quarrel', cursive;
     font-size: 45px;
     color: #FFB03B;
 }
 #banner p{
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Lovers Quarrel', cursive;
     color: #fcfcfc;
     font-size: 34px;
 }
 .section-padding{
     padding: 60px 0px;
 }
-.logo-name{
-    font-family: 'Satisfy', sans-serif;
+.welcome-header{
+    font-family: 'Lovers Quarrel', cursive;
     font-size: 65px;
     margin-top: 140px;
     color: #FFB03B;

@@ -7,6 +7,17 @@ html, body {
     margin: 0;
 }
 
+#app, #banner, .bg-color {
+    height: 100%;
+    /* margin-top: 2em; */
+}
+
+#inventory-banner {
+    background: url(../img/banner-bg.jpg) no-repeat center top;
+    background-size: cover;
+    height: 230px;
+}
+
 .full-height {
     height: 100vh;
 }
