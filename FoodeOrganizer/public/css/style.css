@@ -8,7 +8,7 @@
 body {
 	font-size: 15px;
     line-height: 1.52;
-    color: #717f86;
+    color: #717f86; 
     font-size: 16px;
 	font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -34,8 +34,24 @@ table {
     background-size: cover;
     min-height: 630px;
 }
+
+#inventory-banner {
+    background: url(../img/banner-bg.jpg) no-repeat center top;
+    background-size: cover;
+    height: 230px;
+}
+
+#inventory-table {
+    width: 70%;
+    margin: 1em;
+}
+
+table[id^="DataTables"] {
+    margin-left: -1px;
+}
+
 .bg-color{
-    background-color: RGBA(0, 0, 0, 0.61);
+    background-color: RGBA(0, 0, 0, 0.61); 
     min-height: 630px;
 }
 #banner h2{

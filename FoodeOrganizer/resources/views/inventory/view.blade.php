@@ -1,13 +1,20 @@
 @extends('layouts.tableView')
 
+<section id="inventory-banner">
+	<div class="bg-color">
+		@include('layouts.sidemenu')
+	</div>
+</section>
+
 @section('header')
-	<a href="{!! URL::to('createCourse/') !!}" class="btn btn-default" role="button">Нов Курс</a>
+	<span class="label label-info">Последно пазаруване</span>
 @endsection
 
 @section('head')
 
 	<th>Име</th>
-	<th>Операции</th>
+	<th>Продукт</th>
+	<th>Количество</th>
 
 @endsection
 
@@ -15,18 +22,17 @@
 @endsection
 
 @section('body')
-	@foreach($courses as $course)
+	@foreach($usersProd as $item)
 	<tr>
-		<td>{{ $course->course_name }}</td>
 		<td>
-			<a href="{{ URL::to('editCourse', $course->course_id) }}" class="btn btn-success" role="button">Редактирай</a>
-
-			<a href="{{ URL::to('deleteCourse', $course->course_id) }}" class="btn btn-danger" role="button">Изтрий</a>
+			{{ $item->user_username }} {{ $item->user_fname }} {{ $item->user_lname }}
+		</td> 
+		<td>
+			{{ $item->inventory->first()->parent_product_id }}
+		</td>
+		<td>
+			{{ $item->inventory->first()->quantity }}
 		</td>
 	</tr>
 	@endforeach
-@endsection
-
-@section('pagination')
-
 @endsection

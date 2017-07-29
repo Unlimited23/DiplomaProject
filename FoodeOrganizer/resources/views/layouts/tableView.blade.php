@@ -1,11 +1,18 @@
+@extends('layouts.app')
+
+@section('table')
+
 <div class="wrapper">
-	<section class="panel panel-primary">
-		<div class="panel-heading">
-			@yield('header')
+	<section id="inventory-table" class="panel panel-success">
+		<div class = "panel-heading">
+			<h3 class = "panel-title">
+				@yield('header')
+			</h3>
 		</div>
+			
 
 		<div>
-		<table class="table table-striped table-hover table-bordered student">
+		<table class="table table-striped table-hover table-bordered inventory">
 			<thead>
 		        @yield('head')
 			</thead>
@@ -13,9 +20,11 @@
 		        @yield('foot')
 			</tfoot>
 			<tbody>
-				@yield('body')
+			@yield('body')
 			</tbody>
 		</table>
 		</div>
 	</section>
 </div>
+
+@endsection

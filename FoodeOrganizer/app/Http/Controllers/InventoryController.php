@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use App\Product;
+use App\Inventory;
 use Illuminate\Http\Request;
 
 class InventoryController extends Controller
@@ -15,7 +18,6 @@ class InventoryController extends Controller
     {
         $this->middleware('auth');
     }
-
     /**
      * Show the application dashboard.
      *
@@ -23,6 +25,15 @@ class InventoryController extends Controller
      */
     public function index()
     {
-        return view('inventory');
+        // $userProducts = Product::with(['user', 'inventory'])->first();
+        // $inventory = Inventory::with(['users', 'products'])->first();
+        // $products = Inventory::with('products')->get();
+        $usersProd = User::with('inventory')->get();
+        foreach($usersProd as $item) 
+        {
+            $inv = $item->inventory->first();
+            $test = $inv->quantity;
+        } 
+        return view('inventory.view', compact('usersProd'));
     }
 }

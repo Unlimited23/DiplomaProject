@@ -14,21 +14,19 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Satisfy|Bree+Serif|Candal|PT+Sans" rel="stylesheet" type="text/css"> 
     <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet"> 
-    <!-- Styles -->    
-     {!! HTML::style('css/font-awesome.min.css') !!} 
+    <!-- Styles --> 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">  
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"/> 
+    {!! HTML::style('css/font-awesome.min.css') !!} 
     {!! HTML::style('css/bootstrap.min.css') !!}
     {!! HTML::style('css/style.css') !!}
-    {!! HTML::style('css/custom.css') !!} 
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- {!! HTML::style('css/custom.css') !!}  -->
+    
 </head>
 <body>
     <div id="app">
-        <!-- <div class="collapse navbar-collapse" id="app-navbar-collapse">
-            <ul class="nav navbar-nav">
-                &nbsp;
-            </ul>
-        </div> -->
         @yield('content')
+        @yield('table')
     </div>
 
     <!-- Scripts -->
@@ -38,5 +36,19 @@
     {{ Html::script('js/bootstrap.min.js') }}
     {{ Html::script('js/jquery.mixitup.min.js') }}
     {{ Html::script('js/custom.js') }}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.table').DataTable({
+                language : {
+                    url : 'http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Bulgarian.json'
+                }
+            });
+        });
+    </script>
 </body>
 </html>

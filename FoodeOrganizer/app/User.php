@@ -30,4 +30,9 @@ class User extends Authenticatable
     protected $hidden = [
         'user_password', 'remember_token',
     ];
+
+    public function inventory()
+    {
+        return $this->hasMany('App\Inventory', 'parent_user_id', 'user_id');
+    }   
 }
