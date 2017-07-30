@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Product;
 use App\Inventory;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class InventoryController extends Controller
@@ -25,15 +26,9 @@ class InventoryController extends Controller
      */
     public function index()
     {
-        // $userProducts = Product::with(['user', 'inventory'])->first();
-        // $inventory = Inventory::with(['users', 'products'])->first();
-        // $products = Inventory::with('products')->get();
-        $usersProd = User::with('inventory')->get();
-        foreach($usersProd as $item) 
-        {
-            $inv = $item->inventory->first();
-            $test = $inv->quantity;
-        } 
-        return view('inventory.view', compact('usersProd'));
+        $user = User::where('user_id', Auth::id())->firstOrFail();
+        $products = $user->products;
+
+        return view('inventory.view', compact('products'));
     }
 }

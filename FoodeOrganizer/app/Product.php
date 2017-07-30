@@ -20,8 +20,8 @@ class Product extends Model
      */
     protected $primaryKey = 'product_id';
 
-    public function inventory() 
-    {
-        return $this->belongsToMany('App\Inventory', 'up_inventory', 'parent_product_id'); //check parent_user_id
-    }
+    // public function inventory() 
+    // {
+    //     return $this->belongsTo('App\Inventory', 'parent_product_id'); //check parent_user_id
+    // }
 }

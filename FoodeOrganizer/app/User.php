@@ -31,8 +31,8 @@ class User extends Authenticatable
         'user_password', 'remember_token',
     ];
 
-    public function inventory()
+    public function products()
     {
-        return $this->hasMany('App\Inventory', 'parent_user_id', 'user_id');
-    }   
+        return $this->belongsToMany('App\Product', 'up_inventory', 'parent_user_id', 'parent_product_id')->withPivot('quantity', 'final_price');
+    }
 }

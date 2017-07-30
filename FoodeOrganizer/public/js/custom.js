@@ -6,6 +6,13 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 
+
+// $(document).on('click', 'body', function() {
+//     debugger;
+//     closeNav();
+//     document.getElementById("mySidenav").style.width = "0";
+// });
+
 (function ($) {
     // Instantiate MixItUp:
     $('#Container').mixItUp();

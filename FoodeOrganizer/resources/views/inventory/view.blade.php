@@ -12,9 +12,10 @@
 
 @section('head')
 
-	<th>Име</th>
 	<th>Продукт</th>
 	<th>Количество</th>
+	<th>Описание</th>
+	<th>Срок на годност</th>
 
 @endsection
 
@@ -22,16 +23,20 @@
 @endsection
 
 @section('body')
-	@foreach($usersProd as $item)
+
+	@foreach($products as $product)
 	<tr>
 		<td>
-			{{ $item->user_username }} {{ $item->user_fname }} {{ $item->user_lname }}
+			{{ $product->product_name }}
 		</td> 
 		<td>
-			{{ $item->inventory->first()->parent_product_id }}
+			{{ $product->pivot->quantity}}
 		</td>
 		<td>
-			{{ $item->inventory->first()->quantity }}
+			{{ $product->product_description}}
+		</td>
+		<td>
+			{{ $product->product_expiry_date}}
 		</td>
 	</tr>
 	@endforeach

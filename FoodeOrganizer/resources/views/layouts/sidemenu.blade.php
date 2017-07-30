@@ -12,7 +12,7 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="#about">Shop</a>
             <a href="#about">Purchase History</a>
-            <a href="#event">Recipies</a>
+            <a href="#event">Recipes</a>
             <a href="#menu-list">Products</a>
             @if (Route::has('login'))
                 @if (Auth::check())
@@ -30,7 +30,7 @@
                     <a href="{{ url('/register') }}">Register</a>
                 @endif
             @endif
-            <a href="javascript:void(0)" onclick="closeNav()">Exit</a>
+            <!-- <a href="javascript:void(0)" onclick="closeNav()">Exit</a> -->
         </div>
         <!-- Use any element to open the sidenav -->
         <span onclick="openNav()" class="pull-right menu-icon">☰</span>

@@ -25,8 +25,8 @@ class Inventory extends Model
     //     return $this->belongsToMany('App\Product', 'products', 'parent_product_id');
     // }
 
-    public function users()
-    {
-        return $this->belongsTo('App\User', 'users', 'parent_user_id');
-    }
+    // public function users()
+    // {
+    //     return $this->belongsTo('App\User', 'users', 'parent_user_id');
+    // }
 }
