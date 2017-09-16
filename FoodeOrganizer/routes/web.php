@@ -22,6 +22,8 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/inventory', 'InventoryController@index')->name('inventory');
 
     //Products crud
-    Route::get('/products', 'ProductController@index');
+    Route::get('/showProducts', 'ProductController@index');
+    Route::get('/products/create', 'ProductController@store');
+    
 });
 

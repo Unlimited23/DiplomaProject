@@ -16,7 +16,10 @@ class CreateRecipesTable extends Migration
         Schema::create('recipes', function (Blueprint $table) {
             $table->increments('recipe_id');
             $table->unique('recipe_id');
-            $table->tinyInteger('recipe_type');
+
+            $table->integer('recipe_type')->unsigned();
+            $table->foreign('recipe_type')
+                  ->references('type_id')->on('recipe_types');
         });
     }
 

@@ -20,6 +20,10 @@ class Inventory extends Model
      */
     protected $primaryKey = 'id';
 
+    protected $fillable = [];
+
+    public $timestamps;
+
     // public function products() 
     // {
     //     return $this->belongsToMany('App\Product', 'products', 'parent_product_id');
