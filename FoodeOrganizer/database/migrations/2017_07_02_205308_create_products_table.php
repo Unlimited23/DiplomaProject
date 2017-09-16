@@ -19,6 +19,8 @@ class CreateProductsTable extends Migration
             $table->string('product_description');
             $table->string('product_name', 50);
             $table->float('product_price', 4, 2);
+            $table->integer('product_type');
+            $table->boolean('isHealthy');
             $table->datetime('product_expiry_date');
             $table->timestamps();
         });

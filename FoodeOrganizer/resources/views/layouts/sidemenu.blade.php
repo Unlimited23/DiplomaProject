@@ -1,10 +1,10 @@
 <header id="header">
     <div class="container">
         <div id="mySidenav" class="sidenav">
-            <div class="input-group custom-search-form">
+            <div id="sidenavSearch" class="input-group custom-search-form">
                 <input type="text" class="form-control" name="search" placeholder="Search...">
                 <span class="input-group-btn">
-                    <button class="btn btn-default-sm" type="submit">
+                    <button class="btn btn-success-sm" type="submit">
                         <i class="fa fa-search"></i>
                     </button>
                 </span>
@@ -13,7 +13,7 @@
             <a href="#about">Shop</a>
             <a href="#about">Purchase History</a>
             <a href="#event">Recipes</a>
-            <a href="#menu-list">Products</a>
+            <a href="{{ url('/products') }}">Products</a>
             @if (Route::has('login'))
                 @if (Auth::check())
                     <a href="{{ url('/inventory') }}">Inventory</a>

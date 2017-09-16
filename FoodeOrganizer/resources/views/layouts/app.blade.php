@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Satisfy|Bree+Serif|Candal|PT+Sans" rel="stylesheet" type="text/css"> 
     <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet"> 
     <!-- Styles --> 
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">  
+    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet">   -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"/> 
     {!! HTML::style('css/font-awesome.min.css') !!} 
     {!! HTML::style('css/bootstrap.min.css') !!}
@@ -30,7 +30,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <!-- <script src="{{ asset('js/app.js') }}"></script> -->
     {{ Html::script('js/jquery.min.js') }}
     {{ Html::script('js/jquery.easing.min.js') }}
     {{ Html::script('js/bootstrap.min.js') }}
@@ -42,13 +42,23 @@
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
+        $(document).ready(function() {
             $('.table').DataTable({
                 language : {
                     url : 'http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Bulgarian.json'
                 }
             });
         });
+
+        $(document).ready(function() {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+        })
+        
     </script>
+    @yield('script')
 </body>
 </html>

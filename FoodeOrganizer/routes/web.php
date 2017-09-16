@@ -11,11 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Auth::routes();
+
+    Route::get('/', 'HomeController@index');
+
+
+    Route::get('/inventory', 'InventoryController@index')->name('inventory');
+
+    //Products crud
+    Route::get('/products', 'ProductController@index');
 });
-
-Auth::routes();
-
-Route::get('/inventory', 'InventoryController@index')->name('inventory');
 

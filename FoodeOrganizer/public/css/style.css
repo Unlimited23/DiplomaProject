@@ -46,6 +46,10 @@ table {
     margin: 1em;
 }
 
+#sidenavSearch {
+    padding: 8px 8px 8px 32px;
+}
+
 table[id^="DataTables"] {
     margin-left: -1px;
 }
