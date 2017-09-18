@@ -20,10 +20,14 @@ Route::group(['middleware' => 'web'], function () {
 
 
     Route::get('/inventory', 'InventoryController@index')->name('inventory');
-
-    //Products crud
-    Route::get('/showProducts', 'ProductController@index');
-    Route::get('/products/create', 'ProductController@store');
     
+    //Products crud
+    Route::get('/products', 'ProductController@index');
+    Route::post('/products/store', 'ProductController@store');
+    Route::get('/products/edit/{id}', 'ProductController@edit');
+    Route::get('/products/destroy/{id}', 'ProductController@destroy');
+
+    //Profile crud
+    Route::get('/profile', 'ProfileController@index');
 });
 

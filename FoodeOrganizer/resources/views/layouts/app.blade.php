@@ -17,6 +17,7 @@
     <!-- Styles --> 
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet">   -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"/> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     {!! HTML::style('css/font-awesome.min.css') !!} 
     {!! HTML::style('css/bootstrap.min.css') !!}
     {!! HTML::style('css/style.css') !!}
@@ -25,12 +26,20 @@
 </head>
 <body>
     <div id="app">
-        @yield('content')
-        @yield('table')
+        <section id="banner">
+            <div class="bg-color">
+                @include('layouts.sidemenu')
+                @yield('content')
+                @yield('table')
+            </div>
+            
+        </section>
     </div>
 
     <!-- Scripts -->
     <!-- <script src="{{ asset('js/app.js') }}"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     {{ Html::script('js/jquery.min.js') }}
     {{ Html::script('js/jquery.easing.min.js') }}
     {{ Html::script('js/bootstrap.min.js') }}

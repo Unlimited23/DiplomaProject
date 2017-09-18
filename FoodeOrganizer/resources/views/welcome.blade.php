@@ -2,9 +2,7 @@
 
 @section('content')
 <!--banner-->
-<section id="banner">
-<div class="bg-color">
-    @include('layouts.sidemenu')
+
     <div class="container">
         <div class="row">
             <div class="inner text-center">
@@ -14,7 +12,6 @@
             </div>
         </div>
     </div>
-</div>
-</section>
+
 <!-- / banner -->
 @endsection

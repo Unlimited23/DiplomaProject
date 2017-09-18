@@ -3,12 +3,12 @@
 @section('table')
 
 <div class="wrapper">
-	<section id="inventory-table" class="panel panel-success">
+	<section id="tableView" class="panel panel-success">
 		<div class="panel-heading">
 			@yield('header')
 		</div>
 
-		<div class="panel-body">
+		<!-- <div class="panel-body">
 			<form action="#" method="GET" id="frm-search">
 				<table>
 					<tr>
@@ -16,7 +16,7 @@
 					</tr>
 				</table>
 			</form>
-		</div>
+		</div> -->
 
 		<div class="panel body">
 			<table class="table table-striped table-hover table-bordered inventory">

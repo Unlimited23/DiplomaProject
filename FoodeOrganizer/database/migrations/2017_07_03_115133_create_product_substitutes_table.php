@@ -21,10 +21,14 @@ class CreateProductSubstitutesTable extends Migration
             $table->foreign('parent_product_id')
                   ->references('product_id')->on('products');
 
+            $table->integer('product_substitute_id')->unsigned()
+                  ->foreign('product_substitute_id')
+                  ->references('product_id')->on('products');
+
             $table->integer('parent_product_type')->unsigned();
             $table->foreign('parent_product_type')
                 ->references('type_id')->on('product_types');
-
+            
             $table->boolean('isVegetarian');
             $table->boolean('isVegan');
         });

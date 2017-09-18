@@ -2,20 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
+use App\BMICalculator;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class BMICalculatorController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-      $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -23,8 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-        return view('products.view', compact('products'));
+        //
     }
 
     /**
@@ -45,26 +35,16 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $product = new Product;
-
-        $product->isHealthy = $request->isHealthy;
-        $product->product_name = $request->product_name;
-        $product->product_type = $request->product_type;
-        $product->product_price = $request->product_price;
-        $product->product_description = $request->product_description;
-        $product->product_expiry_date = $request->product_expiry_date;
-
-        $product->save();
-        return Redirect('/showProducts')->withInput();
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  \App\BMICalculator  $bMICalculator
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show(BMICalculator $bMICalculator)
     {
         //
     }
@@ -72,10 +52,10 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  \App\BMICalculator  $bMICalculator
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(BMICalculator $bMICalculator)
     {
         //
     }
@@ -84,10 +64,10 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
+     * @param  \App\BMICalculator  $bMICalculator
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, BMICalculator $bMICalculator)
     {
         //
     }
@@ -95,10 +75,10 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Product  $product
+     * @param  \App\BMICalculator  $bMICalculator
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(BMICalculator $bMICalculator)
     {
         //
     }

@@ -1,7 +1,8 @@
-<div class="modal fade" id="inventory-product" tabindex="-1" 
+<div class="container modal fade" id="inventory-product" tabindex="-1" 
 role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="model-content">
+    <div class="panel panel-success modal-dialog">
+        <div class="panel-heading">Добави продукт</div>
+        <div class="panel-body model-content">
             <div class="model-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                     <span aria-hidden="true">&times;</span>
