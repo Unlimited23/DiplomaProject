@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<section id="banner">
-    <div class="bg-color">
+
         <div class="container">
-        @include('layouts.sidemenu')
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <div class="panel panel-success">
@@ -68,6 +66,5 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+
 @endsection

@@ -14,7 +14,7 @@ class BMICalculatorController extends Controller
      */
     public function index()
     {
-        //
+        return view('bmi_calculator.calculator');
     }
 
     /**

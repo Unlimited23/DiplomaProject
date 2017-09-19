@@ -18,6 +18,7 @@
 	<th>Цена</th>
 	<th>Категория Продукт</th>
 	<th>Здравословен</th>
+	<th>Операции</th>
 
 @endsection
 
@@ -79,7 +80,7 @@
 <script>
 	//showing modal form
 	$('#add-product').on('click', function() {
-		$('#inventory-product').modal();
+		$('#modal-product').modal();
 	});
 
 	//adding new product

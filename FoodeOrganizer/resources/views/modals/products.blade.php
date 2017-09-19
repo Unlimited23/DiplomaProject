@@ -1,12 +1,12 @@
-<div class="container modal fade" id="inventory-product" tabindex="-1" 
+<div class="container modal fade" id="modal-product" tabindex="-1" 
 role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="panel panel-success modal-dialog">
         <div class="panel-heading">Добави продукт</div>
         <div class="panel-body model-content">
             <div class="model-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                     <span aria-hidden="true">&times;</span>
-                </button>
+                </button> -->
                 <h4 class="modal-title">Нов Продукт</h4>
                 <div class="modal-body">
                     <div class="row">
@@ -42,7 +42,7 @@ role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         </div>
                         <div class="col-sm-5">
                             <div class="form group">
-                            <select multiple class="form-control" id="exampleFormControlSelect2">
+                            <select  class="form-control" id="exampleFormControlSelect2">
                                 <option>Напитки</option>
                                 <option>Зърнени</option>
                                 <option>Бобови</option>

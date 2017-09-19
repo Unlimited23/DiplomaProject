@@ -18,8 +18,9 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('/', 'HomeController@index');
 
-
+    //Inventory crud
     Route::get('/inventory', 'InventoryController@index')->name('inventory');
+    Route::get('/inventory/edit/', 'InventoryController@edit');
     
     //Products crud
     Route::get('/products', 'ProductController@index');
@@ -29,5 +30,16 @@ Route::group(['middleware' => 'web'], function () {
 
     //Profile crud
     Route::get('/profile', 'ProfileController@index');
+
+    //History crud
+    Route::get('/history', 'HistoryController@index');
+
+    //Recipes crud
+    Route::get('/recipes', 'RecipeController@index');
+
+    //BMI calculator crud
+    Route::get('/bmiCalculator', 'BMICalculatorController@index');
+
+    //
 });
 

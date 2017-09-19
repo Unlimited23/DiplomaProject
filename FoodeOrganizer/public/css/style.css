@@ -37,12 +37,67 @@ table {
 }
 
 #tableView {
-    width: 75%;
+    width: 90%;
     margin: 3em;
+    left: 13%;
+    margin-top: 4%;
+    margin-left: 3.6em;
+}
+
+#modal-inventory {
+    width: 100%;
+    margin-top: 5em;
+}
+
+#inventory-product {
+    width: 1200px;
 }
 
 #sidenavSearch {
     padding: 8px 8px 8px 32px;
+}
+
+#modal-product .modal-dialog{
+    margin-top: 5em;
+}
+
+#finish-inventory {
+    margin-top: 10px;
+}
+
+.centered-table {
+    left: 13%;
+    margin-top: 4%;
+}
+
+.inventory-mark {
+    margin-left: 15px;
+}
+
+.vcenter {
+    min-height: 66px;
+  
+    display: flex;
+    align-items: center;
+  }
+
+.outline-transparent {
+    background-image: none;
+    background-color: transparent;
+}
+
+.outline-success {
+    color: #5cb85c;
+    background-image: none;
+    background-color: transparent;
+    border-color: #5cb85c;
+}
+
+.outline-danger {
+    color: #B85C5C;
+    background-image: none;
+    background-color: transparent;
+    border-color: #B85C5C;
 }
 
 table[id^="DataTables"] {

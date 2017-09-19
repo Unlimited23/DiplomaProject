@@ -26,9 +26,15 @@ class InventoryController extends Controller
      */
     public function index()
     {
-        $user = User::where('user_id', Auth::id())->firstOrFail();
-        $products = $user->products;
+        // $user = User::where('user_id', Auth::id())->firstOrFail();
+        // $products = $user->products;
 
+        $products = Product::all();
         return view('inventory.view', compact('products'));
+    }
+
+    public function edit() {
+        $products = Product::all();
+        return view('modals.inventory', compact('products'));
     }
 }

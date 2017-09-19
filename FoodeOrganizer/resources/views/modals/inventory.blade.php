@@ -1,42 +1,72 @@
 <div class="container modal fade" id="inventory-product" tabindex="-1" 
 role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="panel panel-success modal-dialog">
+    <div id="modal-inventory" class="panel panel-success modal-dialog">
         <div class="panel-heading">Добави продукт</div>
         <div class="panel-body model-content">
             <div class="model-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title">Нов Продукт</h4>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-sm-5">
-                            <label for="inventory_product">Въведете продукт:</label>
-                        </div>
-                        <div class="col-sm-5">
-                            <input type="text" name="inventory_product" id="new-product"
-                                class="form-control" placeholder="Нов Продукт">
-                        </div>
-                        <div class="col-sm-2">
-                            <button class="btn btn-default" type="button" >Избери</button>
-                            <!-- <input type="text" name="inventory_product" id="new-product"
-                                   class="form-control" placeholder="Нов Продукт"> -->
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-5">
-                            <label for="inventory_quantity">Въведете количество:</label>
-                        </div>
-                        <div class="col-sm-5">
-                            <input type="text" name="inventory_quantity" id="product-quantity"
-                                class="form-control" placeholder="Количество">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button id="save-inventory" class="btn btn-success" type="button">Запази</button>
-                    <button data-dismiss="modal" class="btn btn-default" type="button">Затвори</button>
-                </div>
+
+                <table class="table table-striped table-hover table-bordered">
+                    <thead>
+                        <th>Име на Продукт</th>
+                        <th>Описание</th>
+                        <th>Цена</th>
+                        <th>Категория Продукт</th>
+                        <th>Здравословен</th>
+                        <th>Операции</th>
+                    </thead>
+                    
+                    <tfoot>
+                    </tfoot>
+
+                    <tbody>
+                        @foreach($products as $product)
+                            <tr>
+                                <td>
+                                    {{ $product->product_name }}
+                                </td> 
+                                <td>
+                                    {{ $product->product_description}}
+                                </td>
+                                <td>
+                                    {{ $product->product_price}} лв.
+                                </td>
+                                <td>
+                                    
+                                        @if ($product->product_type == 1)
+                                            Бобови
+                                        @elseif ($product->product_type == 2)
+                                            Зърнени
+                                        @elseif ($product->product_type == 3)
+                                            Млечни
+                                        @elseif ($product->product_type == 4)
+                                            Животински	
+                                        @elseif ($product->product_type == 5)
+                                            Месо
+                                        @elseif ($product->product_type == 6)
+                                            Вегетариански
+                                        @elseif ($product->product_type == 7)
+                                            Вегански
+                                        @elseif ($product->product_type == 8)
+                                            Напитки
+                                        @elseif ($product->product_type == 9)
+                                            Други
+                                        @endif
+                                </td>
+                                <td>
+                                    @if ($product->isHealthy)
+                                        Да
+                                    @else 
+                                        Не
+                                    @endif
+                                </td>
+                                <td>
+                                    <a href="{{ URL::to('/products/edit/', $product->product_id) }}" class="btn btn-default" role="button">Постави</a>
+                                </td>
+                            </tr>
+                            @endforeach
+                    </tbody>
+                </table>
+        
             </div>
         </div>
     </div>
