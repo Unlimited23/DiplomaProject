@@ -21,16 +21,21 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     
-                    <li><a href="{{ url('/recipes') }}">Рецепти</a></li>                   
-                    <li><a href="{{ url('/bmiCalculator') }}">ИТМ Калкулатор</a></li>
-                    @if (Route::has('login'))
-                        @if (Auth::check())
-                            <li><a href="{{ url('/profile') }}">Профил</a></li>
-                            <li><a href="{{ url('/history') }}">История на инвентара</a></li>
-                            <li><a href="{{ url('/inventory') }}">Инвентар</a></li>
-                            <li><a href="{{ url('/products') }}">Продукти</a></li>
-                        @endif
+                @if (Route::has('login'))
+                    @if (Auth::check())
+                        <li><a href="{{ url('/inventory') }}">Инвентар</a></li>
+                        <li><a href="{{ url('/products') }}">Продукти</a></li>
+                        <!-- <li><a href="{{ url('/profile') }}">Профил</a></li> -->
+                        
                     @endif
+                @endif
+                        <!-- <li><a href="{{ url('/recipes') }}">Рецепти</a></li>                    -->
+                        <li><a href="{{ url('/bmiCalculator') }}">ИТМ Калкулатор</a></li>
+                @if (Route::has('login'))
+                    @if (Auth::check())
+                        <li><a href="{{ url('/history') }}">История на инвентара</a></li>
+                    @endif
+                @endif
                 </ul>
                         
                 <!-- Right Side Of Navbar -->

@@ -17,6 +17,7 @@ class CreateProductTypesTable extends Migration
             $table->increments('type_id');
             $table->unique('type_id');
             $table->string('type_descript');
+            $table->binary('type_image');
         });
     }
 

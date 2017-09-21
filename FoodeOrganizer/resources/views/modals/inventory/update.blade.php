@@ -1,7 +1,7 @@
 <div class="container modal fade" id="inventory-product" tabindex="-1" 
 role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div id="modal-inventory" class="panel panel-success modal-dialog">
-        <div class="panel-heading">Добави продукт</div>
+        <div class="panel-heading">Продукти</div>
         <div class="panel-body model-content">
             <div class="model-header">
 
@@ -9,7 +9,6 @@ role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <thead>
                         <th>Име на Продукт</th>
                         <th>Описание</th>
-                        <th>Цена</th>
                         <th>Категория Продукт</th>
                         <th>Здравословен</th>
                         <th>Операции</th>
@@ -26,9 +25,6 @@ role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 </td> 
                                 <td>
                                     {{ $product->product_description}}
-                                </td>
-                                <td>
-                                    {{ $product->product_price}} лв.
                                 </td>
                                 <td>
                                     

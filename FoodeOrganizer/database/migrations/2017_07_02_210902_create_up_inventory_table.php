@@ -15,9 +15,10 @@ class CreateUpInventoryTable extends Migration
     {
         Schema::enableForeignKeyConstraints();
         Schema::create('up_inventory', function (Blueprint $table) {
-            $table->increments('id');
-            $table->unique('id');
-            
+            $table->increments('inventory_id');
+            $table->unique('inventory_id');
+            $table->string('inventory_name', 50);
+
             $table->integer('parent_user_id')->unsigned();
             $table->foreign('parent_user_id')
                   ->references('user_id')->on('users')
@@ -28,8 +29,9 @@ class CreateUpInventoryTable extends Migration
                   ->references('product_id')->on('products')
                   ->onDelete('cascade');
 
-            $table->float('quantity', 4, 2);
-            $table->double('final_price', 4, 2);
+            $table->double('product_price', 4, 2);
+            $table->float('product_quantity', 4, 2);
+            $table->datetime('product_expiry_date');
         });
     }
 

@@ -27,15 +27,8 @@ role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 class="form-control" placeholder="Описание на продукта">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-5">
-                            <label for="product_price">Въведете цена:</label>
-                        </div>
-                        <div class="col-sm-5">
-                            <input type="text" name="product_price" id="product-price"
-                                class="form-control" placeholder="Цена">
-                        </div>
-                    </div>
+
+
                     <div class="row">
                         <div class="col-sm-5">
                             <label for="product_type">Изберете категория:</label>

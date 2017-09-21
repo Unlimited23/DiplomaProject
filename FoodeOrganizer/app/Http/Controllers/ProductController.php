@@ -50,9 +50,7 @@ class ProductController extends Controller
         $product->isHealthy = $request->isHealthy;
         $product->product_name = $request->product_name;
         $product->product_type = $request->product_type;
-        $product->product_price = $request->product_price;
         $product->product_description = $request->product_description;
-        $product->product_expiry_date = $request->product_expiry_date;
 
         $product->save();
         return Redirect('/showProducts')->withInput();

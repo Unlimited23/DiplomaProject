@@ -37,4 +37,22 @@ class InventoryController extends Controller
         $products = Product::all();
         return view('modals.inventory', compact('products'));
     }
+
+    public function store(Request $request)
+    {
+        $inventory = new Inventory;
+
+        $inventory->inventory_name = $request->inventory_name;
+        $inventory->parent_user_id = \Auth::user()->id;
+        $inventory->parent_product_id = $request->parent_product_id;
+        $inventory->product_price = $request->product_price;
+        $inventory->product_quantity = $request->product_quantity;
+        $inventory->product_expiry_date = $request->product_expiry_date;
+
+        $inventory->save();
+        return Redirect('/inventory')->withInput();
+    }
+
+
+    
 }

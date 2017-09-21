@@ -15,7 +15,6 @@
 
 	<th>Име на Продукт</th>
 	<th>Описание</th>
-	<th>Цена</th>
 	<th>Категория Продукт</th>
 	<th>Здравословен</th>
 	<th>Операции</th>
@@ -34,9 +33,6 @@
 		</td> 
 		<td>
 			{{ $product->product_description}}
-		</td>
-		<td>
-			{{ $product->product_price}} лв.
 		</td>
 		<td>
 			
